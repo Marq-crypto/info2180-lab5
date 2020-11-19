@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
-    function ReqC(){
+    function ReqC(city=""){
         var CC=$("#country").val();
-        $.ajax("http://localhost/info2180-lab5/world.php",{
+        $.ajax("world.php",{
             method: 'GET',
             data:{
-                country:CC
+                country:CC,
+                context:city
             }
         }).done(function(resp){
             let I=resp;
@@ -18,4 +19,10 @@ $(document).ready(function(){
     $("#lookup").click(function(){
         ReqC();
     });
+
+    $("#lookup-cities").click(function(){
+        ReqC("cities");
+    });
+
+    
 });

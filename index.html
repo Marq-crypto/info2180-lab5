@@ -5,7 +5,7 @@
 		<title>World Database Lookup</title>
 
 		<!-- you can modify this as needed or to your preference -->
-		<link href="world.css" type="text/css" rel="stylesheet" />
+		<link rel='stylesheet' type='text/css' href='world.css' />
 
 		<!-- you write this -->
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -21,7 +21,11 @@
 			<div id="controls">
 				<label for="country">Country:</label>
 				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<div id="buttons">
+					<button id="lookup">Lookup</button>
+					<button id="lookup-cities">Lookup Cities</button>
+				</div>
+				
 			</div>
 			
 			<div id="result">
